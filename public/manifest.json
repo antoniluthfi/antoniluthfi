@@ -1,0 +1,32 @@
+{
+    "name": "Update Bola",
+    "short_name": "Update Bola",
+    "description": "Aplikasi yang memberikan informasi perkembangan seputar sepak bola",
+    "gcm_sender_id": "252690868828",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#09f",
+    "theme_color": "#09f",
+    "icons": [
+        {
+            "src": "/images/soccer-ball-grass-icon512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/soccer-ball-grass-icon256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/soccer-ball-grass-icon128x128.png",
+            "sizes": "128x128",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/soccer-ball-grass-icon96x96.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        }
+    ]
+}

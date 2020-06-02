@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Update Bola | Team</title>
+  <meta name="description" content="My first PWA" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" type="image/png" href="images/default.png" />
+  <link rel="stylesheet" href="css/materialize.min.css" />
+  <meta name="theme-color" content="#09f" />
+  <link rel="apple-touch-icon" href="/images/soccer-ball-grass-icon96x96.png">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <div class="navbar-fixed">
+    <nav class="#42a5f5 blue lighten-1" role="navigation">
+      <div class="nav-wrapper container">
+        <a href="./"  class="brand-logo" id="logo-container">Update Bola</a>
+        <div class="container">
+          <a href="javascript:history.back()" class="sidenav-trigger">
+            <i class="material-icons #e3f2fd blue lighten-2">arrow_back</i>
+          </a>  
+        </div>
+      </div>
+    </nav>
+  </div>
+  
+  <br>
+  <div id="loader" class="center"></div>
+  <div id="teamInfo" class="center container"></div>
+  <br><br>
+  
+  <script src="js/materialize.min.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/idb.js"></script>
+  <script src="js/db.js"></script>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var urlParams = new URLSearchParams(window.location.search);
+      var id = Number(urlParams.get("id"));
+      getTheTeam(urlTeamDetail+id);
+    });
+  </script>
+  
+</body>
+</html>
