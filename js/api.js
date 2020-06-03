@@ -2,11 +2,11 @@ const base_url = "https://api.football-data.org/v2/";
 const token = 'c618b0c7249d47d4977af3b85cd51fcc';
 const liga = [
   ['Champions League', 2001, 'championsLeague', '/images/1.jpg'],
-  ['Liga Spanyol', 2003, 'bundesLiga', '/images/2.jpg'],
-  ['Liga Jerman', 2014, 'ligaBelanda', '/images/3.jpg'],
-  ['Liga Inggris', 2021, 'primeraDivision', '/images/4.jpg'],
-  ['Liga Belanda', 2002, 'laLiga', '/images/5.jpg'],
-  ['Liga Prancis', 2015, 'ligaPrancis', '/images/6.jpg']
+  ['Liga Spanyol', 2003, 'bundesLiga', 'images/2.jpg'],
+  ['Liga Jerman', 2014, 'ligaBelanda', 'images/3.jpg'],
+  ['Liga Inggris', 2021, 'primeraDivision', 'images/4.jpg'],
+  ['Liga Belanda', 2002, 'laLiga', 'images/5.jpg'],
+  ['Liga Prancis', 2015, 'ligaPrancis', 'images/6.jpg']
 ];
 
 const urlLiga = {
