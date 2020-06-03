@@ -3,7 +3,7 @@
     "short_name": "Update Bola",
     "description": "Aplikasi yang memberikan informasi perkembangan seputar sepak bola",
     "gcm_sender_id": "252690868828",
-    "start_url": "/index.html",
+    "start_url": "index.html",
     "display": "standalone",
     "background_color": "#09f",
     "theme_color": "#09f",

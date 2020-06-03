@@ -19,7 +19,7 @@ else {
 }
 
 function registerServiceWorker() {
-    return navigator.serviceWorker.register('/service-worker.js')
+    return navigator.serviceWorker.register('service-worker.js')
         .then(function (registration) {
             console.log('Registrasi service worker berhasil.');
             if (registration.active) requestPermission();
