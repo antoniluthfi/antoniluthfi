@@ -1,0 +1,3 @@
+[submodule "update-bola"]
+	path = update-bola
+	url = https://github.com/antoniluthfi/update-bola.git
