@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css?family=Heebo:400,700|Open+Sans:400,700');
+
+:root {
+  --color: #3c3163;
+  --transition-time: 0.5s;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background: url('../images/people-watching.jpg');
+  background-size: cover;
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Open Sans';
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+a {
+  color: inherit;
+}
+
+.card {
+  opacity: 0.9;
+}
+
+.tambahan {
+  padding: 10px 50px 50px 50px;
+}
+
+#cards-wrapper {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 4rem;
+  padding: 4rem;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.card-2 {
+  font-family: 'Heebo';
+  --bg-filter-opacity: 0.5;
+  background-image: linear-gradient(rgba(0,0,0,var(--bg-filter-opacity)),rgba(0,0,0,var(--bg-filter-opacity))), var(--bg-img);
+  height: 20em;
+  width: 15em;
+  font-size: 1.5em;
+  color: white;
+  border-radius: 1em;
+  padding: 1em;
+  /*margin: 2em;*/
+  display: flex;
+  align-items: flex-end;
+  background-size: cover;
+  background-position: center;
+  transition: all, var(--transition-time);
+  position: relative;
+  overflow: hidden;
+  border: 10px solid #ccc;
+  text-decoration: none;
+}
+
+.card-2:hover {
+  transform: rotate(0);
+}
+
+.card-2 h1 {
+  margin: 0;
+  font-size: 1.5em;
+  line-height: 1.2em;
+}
+
+.card-2 p {
+  font-size: 0.75em;
+  font-family: 'Open Sans';
+  margin-top: 0.5em;
+  line-height: 2em;
+}
+
+.card-2 .tags {
+  display: flex;
+}
+
+.card-2 .tags .tag {
+  font-size: 0.75em;
+  background: rgba(255,255,255,0.5);
+  border-radius: 0.3rem;
+  padding: 0 0.5em;
+  margin-right: 0.5em;
+  line-height: 1.5em;
+  transition: all, var(--transition-time);
+}
+
+.card-2:hover .tags .tag {
+  background: var(--color);
+  color: white;
+}
+
+.card-2 .date {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0.75em;
+  padding: 1em;
+  line-height: 1em;
+  opacity: .8;
+}
+
+.card-2:before, .card-2:after {
+  content: '';
+  transform: scale(0);
+  transform-origin: top left;
+  border-radius: 50%;
+  position: absolute;
+  left: -50%;
+  top: -50%;
+  z-index: -5;
+  transition: all, var(--transition-time);
+  transition-timing-function: ease-in-out;
+}
+
+.card-2:before {
+  background: #ddd;
+  width: 250%;
+  height: 250%;
+}
+
+.card-2:after {
+  background: white;
+  width: 200%;
+  height: 200%;
+}
+
+.card-2:hover {
+  color: var(--color);
+}
+
+.card-2:hover:before, .card-2:hover:after {
+  transform: scale(1);
+}
+
+.card-grid-space .num {
+  font-size: 3em;
+  margin-bottom: 1.2rem;
+  margin-left: 1rem;
+}
+
+.info {
+  font-size: 1.2em;
+  display: flex;
+  padding: 1em 3em;
+  height: 3em;
+}
+
+.info img {
+  height: 3em;
+  margin-right: 0.5em;
+}
+
+.info h1 {
+  font-size: 1em;
+  font-weight: normal;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1285px) {
+  #cards-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #cards-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .info {
+    justify-content: center;
+  }
+  .card-grid-space .num {
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #cards-wrapper {
+    padding: 4rem 2rem;
+  }
+  .card-2 {
+    max-width: calc(100vw - 4rem);
+  }
+  .tambahan {
+    padding: 10px;
+  }
+  .tambahan-2 {
+    width: 80%;
+    margin: 15px auto;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  a.brand-logo {
+    font-size: 20pt;
+  }
+  .info {
+    display: block;
+    text-align: center;
+  }
+  .info h1 {
+    margin: 0;
+  }
+  .container {
+    width: 100%;
+  }
+  .tambahan {
+    padding: 10px;
+  }
+  .card {
+    width: 90%;
+    margin: 10px auto;
+  }
+  .tambahan-2 {
+    width: 80%;
+    margin: 15px auto;
+  }
+  .text {
+    font-size: 16pt;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  a.brand-logo {
+    font-size: 17pt;
+  }
+  .tambahan {
+    padding: 10px;
+  }
+  .card {
+    width: 90%;
+    margin: 10px auto;
+  }
+  .tambahan-2 {
+    width: 80%;
+    margin: 15px auto;
+  }
+  .text {
+    font-size: 16pt;
+  }
+}
