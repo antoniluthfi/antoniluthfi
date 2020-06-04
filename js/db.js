@@ -13,12 +13,7 @@ function addToFavorite(data) {
             let dataFavorite = {
                 id: data.id,
                 name: data.name,
-                crestUrl: data.crestUrl,
-                playedGames: data.playedGames,
-                won: data.won,
-                lost: data.lost,
-                draw: data.draw,
-                points: data.points
+                crestUrl: data.crestUrl
             }
             console.log(data);
             store.put(dataFavorite);
@@ -29,7 +24,7 @@ function addToFavorite(data) {
             let message = `${data.name} berhasil ditambahkan ke daftar favorit`;
 
             if (Notification.permission === "granted") {
-                M.Toast({ html: message, classes: 'rounded'});
+                M.Toast({ html: message });
                 showNotification(message);
             } else {
                 console.log('fitur notifikasi tidak diijinkan');
