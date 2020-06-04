@@ -48,7 +48,7 @@ const deleteFromFavorite = (data) => {
             let message = `${data.name} dihapus dari daftar favorit`;
 
             if (Notification.permission === "granted") {
-                M.Toast({ html: message, classes: 'rounded'});
+                M.Toast({ html: message });
                 showNotification(message);
             } else {
                 console.log('fitur notifikasi tidak diijinkan');
